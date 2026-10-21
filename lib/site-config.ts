@@ -1,0 +1,25 @@
+export const siteConfig = {
+  name: "Rizwan Shaji",
+  firstName: "Rizwan",
+  lastName: "Shaji",
+  role: "Business Analyst",
+  bookingUrl: "https://calendly.com/your-handle",
+  email: "you@example.com",
+  phone: "+44 7733620478",
+  location: "UK",
+  nav: [
+    { id: "home", label: "Home" },
+    { id: "projects", label: "Projects" },
+    { id: "technologies", label: "Technologies" },
+    { id: "process", label: "Process" },
+    { id: "journey", label: "Journey" },
+    { id: "certifications", label: "Certifications" },
+    { id: "contact", label: "Contact" },
+  ],
+  socials: [
+    { id: "linkedin", label: "LinkedIn", href: "https://linkedin.com/in/your-handle" },
+    { id: "github", label: "GitHub", href: "https://github.com/your-handle" },
+    { id: "instagram", label: "Instagram", href: "https://instagram.com/your-handle" },
+    { id: "mail", label: "Email", href: "mailto:you@example.com" },
+  ],
+} as const;

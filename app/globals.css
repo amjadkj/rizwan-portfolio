@@ -1,0 +1,122 @@
+@import "tailwindcss";
+
+:root,
+.dark {
+  --background: #220e0b;
+  --foreground: #F5EDED;
+  --primary: #E5484D;
+  --primary-foreground: #F5EDED;
+  --muted: #301a16;
+  --muted-foreground: #9B8888;
+  --border: rgba(255, 255, 255, 0.10);
+  --ring: #E5484D;
+  --radius: 1rem;
+}
+
+@theme inline {
+  --font-sans: var(--font-inter), sans-serif;
+  --font-display: var(--font-playfair), serif;
+  --font-grotesk: var(--font-space-grotesk), sans-serif;
+  
+  --color-surface: #220e0b;
+  --color-surface-dim: #220e0b;
+  --color-surface-bright: #4d332e;
+  --color-surface-container-lowest: #1c0906;
+  --color-surface-container-low: #2b1612;
+  --color-surface-container: #301a16;
+  --color-surface-container-high: #3c2420;
+  --color-surface-container-highest: #482e2a;
+  --color-on-surface: #ffdad4;
+  --color-on-surface-variant: #e2bebc;
+  --color-accent: #E5484D;
+  --color-accent-hover: #F05D62;
+  --color-text-primary: #F5EDED;
+  --color-text-secondary: #BFA7A7;
+  --color-text-muted: #9B8888;
+
+  --animate-float: float 6s ease-in-out infinite;
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-10px); }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  min-height: 100svh;
+  color: #F5EDED;
+  background-color: #050000;
+  background-image: radial-gradient(
+    ellipse at 50% 45%,
+    #510606 0%,
+    #320303 35%,
+    #180202 65%,
+    #050000 100%
+  );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: var(--font-inter), sans-serif;
+  overflow-x: hidden;
+}
+
+section {
+  scroll-margin-top: 6rem;
+}
+
+/* Custom Scrollbar for Obsidian Crimson aesthetic */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #180202;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(229, 72, 77, 0.35);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(229, 72, 77, 0.65);
+}
+
+/* Infinite Marquee */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 35s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-reverse {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0%); }
+}
+
+.animate-marquee-reverse {
+  display: flex;
+  width: max-content;
+  animation: marquee-reverse 35s linear infinite;
+}
+
+.animate-marquee-reverse:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
