@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk, Playfair_Display } from "next/font/google";
+import { SmoothScrollProvider } from "@/components/providers/smooth-scroll";
 import "./globals.css";
 
 const inter = Inter({
@@ -22,9 +23,9 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "John Doe | Business Analyst — Obsidian Crimson Portfolio",
+  title: "Rizwan Shaji | Business Analyst",
   description:
-    "Executive portfolio of John Doe, Business Analyst specializing in high-stakes quantitative analytics, business process engineering, and strategic enterprise systems.",
+    "Executive portfolio of Rizwan Shaji, Business Analyst specializing in high-stakes quantitative analytics, business process engineering, and strategic enterprise systems.",
   keywords: [
     "Business Analyst",
     "Analytics Portfolio",
@@ -32,7 +33,18 @@ export const metadata: Metadata = {
     "Business Intelligence",
     "Process Engineering",
   ],
-  authors: [{ name: "John Doe" }],
+  authors: [{ name: "Rizwan Shaji" }],
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/android-chrome-192x192.png", sizes: "192x192", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+    shortcut: ["/favicon.ico"],
+  },
 };
 
 export default function RootLayout({
@@ -43,11 +55,13 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`dark ${inter.variable} ${spaceGrotesk.variable} ${playfair.variable} scroll-smooth`}
+      className={`dark ${inter.variable} ${spaceGrotesk.variable} ${playfair.variable}`}
     >
       <body className="min-h-screen text-[#F5EDED] selection:bg-[#E5484D]/30 selection:text-[#F5EDED] antialiased">
-        {children}
+        {/* <SmoothScrollProvider>{children}</SmoothScrollProvider> */}
+       {children}
       </body>
     </html>
   );
 }
+

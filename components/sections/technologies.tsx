@@ -20,9 +20,9 @@ import { cn } from "@/lib/utils";
 const MARQUEE_ROW_1 = [
   { name: "Power BI", icon: BarChart3, category: "Business Intelligence" },
   // { name: "Tableau", icon: SiTableau, category: "Visual Analytics" },
-  { name: "Python", icon: SiPython, category: "Data Science & Automation" },
+  // { name: "Python", icon: SiPython, category: "Data Science & Automation" },
   { name: "SQL (Postgres/T-SQL)", icon: SiPostgresql, category: "Data Querying" },
-  { name: "Snowflake", icon: SiSnowflake, category: "Cloud Data Warehouse" },
+  // { name: "Snowflake", icon: SiSnowflake, category: "Cloud Data Warehouse" },
   // { name: "dbt", icon: SiDbt, category: "Analytics Engineering" },
   // { name: "AWS Cloud", icon: SiAmazonwebservices, category: "Cloud Ecosystem" },
   { name: "Google BigQuery", icon: SiGooglecloud, category: "Big Data Processing" },
@@ -156,8 +156,8 @@ export function TechnologiesSection() {
       </div>
 
       {/* Domain Proficiency Matrix */}
-      <div className="mx-auto max-w-5xl px-4 md:px-8">
-        {/* Domain Tabs */}
+      {/* <div className="mx-auto max-w-5xl px-4 md:px-8">
+        Domain Tabs
         <div className="flex flex-wrap items-center justify-center gap-3 mb-8">
           {DOMAINS.map((domain) => {
             const Icon = domain.icon;
@@ -180,7 +180,7 @@ export function TechnologiesSection() {
           })}
         </div>
 
-        {/* Selected Domain Card */}
+        Selected Domain Card
         <div className="rounded-2xl border border-white/15 bg-[rgba(24,2,2,0.75)] p-8 md:p-10 shadow-[0_20px_48px_-12px_rgba(0,0,0,0.7)] backdrop-blur-2xl">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8 border-b border-white/10 pb-6">
             <div>
@@ -208,7 +208,7 @@ export function TechnologiesSection() {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }

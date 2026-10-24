@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import Image from "next/image";
 import { ArrowUp } from "lucide-react";
 import { FaLinkedinIn, FaGithub, FaInstagram } from "react-icons/fa6";
 import { Mail } from "lucide-react";
@@ -17,10 +18,18 @@ export function SiteFooter() {
         {/* Top: Large Typographic Brand Authority */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 pb-16 border-b border-white/10">
           <div>
-            <div className="inline-flex items-center gap-2 mb-3">
-              <span className="size-2 rounded-full bg-[#E5484D] shadow-[0_0_8px_#E5484D]" />
-              <span className="font-grotesk text-xs uppercase tracking-[0.12em] text-[#ffdad4]">
-                Obsidian Crimson
+            <div className="flex items-center gap-3.5 mb-5">
+              <div className="relative size-11 overflow-hidden rounded-full border border-white/20 bg-white/5 p-0.5 shadow-[0_0_16px_rgba(229,72,77,0.35)]">
+                <Image
+                  src="/logo.png"
+                  alt={`${siteConfig.name} Logo`}
+                  width={44}
+                  height={44}
+                  className="size-full object-contain rounded-full"
+                />
+              </div>
+              <span className="font-grotesk text-xs uppercase tracking-[0.14em] text-[#ffdad4] font-medium">
+                {siteConfig.name}
               </span>
             </div>
             <h2 className="font-display text-4xl sm:text-5xl lg:text-7xl font-bold uppercase tracking-tight text-[#F5EDED]">
@@ -114,10 +123,10 @@ export function SiteFooter() {
             ©{siteConfig.name}. All analytical methodologies & rights
             reserved.
           </p>
-          <p className="text-center sm:text-right">
+          {/* <p className="text-center sm:text-right">
             Designed according to the <span className="text-[#ffdad4]">Obsidian Crimson</span> design
             specification.
-          </p>
+          </p> */}
         </div>
       </div>
     </footer>

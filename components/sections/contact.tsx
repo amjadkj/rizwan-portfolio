@@ -10,6 +10,7 @@ import {
   CheckCircle2,
   Sparkles,
   Phone,
+  AlertCircle,
 } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
 import { cn } from "@/lib/utils";
@@ -26,15 +27,38 @@ export function ContactSection() {
 
   const [isSubmitting, setIsSubmitting] = React.useState(false);
   const [isSubmitted, setIsSubmitted] = React.useState(false);
+  const [errorMessage, setErrorMessage] = React.useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate interactive feedback
-    setTimeout(() => {
-      setIsSubmitting(false);
+    setErrorMessage(null);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formState),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(
+          data.error || "Failed to dispatch message. Please check the details and try again."
+        );
+      }
+
       setIsSubmitted(true);
-    }, 1200);
+    } catch (err: any) {
+      setErrorMessage(
+        err.message || "An unexpected error occurred while sending your message. Please try again."
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -77,6 +101,7 @@ export function ContactSection() {
                   <button
                     onClick={() => {
                       setIsSubmitted(false);
+                      setErrorMessage(null);
                       setFormState({
                         name: "",
                         email: "",
@@ -93,6 +118,18 @@ export function ContactSection() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
+                  {errorMessage && (
+                    <div className="rounded-xl border border-[#E5484D]/40 bg-[#E5484D]/15 p-4 text-xs sm:text-sm text-[#ffdad4] flex items-start gap-3 animate-in fade-in duration-200">
+                      <AlertCircle className="size-5 text-[#E5484D] shrink-0 mt-0.5" />
+                      <div className="flex-1">
+                        <span className="font-semibold block text-[#F5EDED] mb-0.5">
+                          Unable to Send Message
+                        </span>
+                        <span>{errorMessage}</span>
+                      </div>
+                    </div>
+                  )}
+
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     {/* Full Name */}
                     <div>
@@ -231,11 +268,11 @@ export function ContactSection() {
                   Current Availability
                 </span>
               </div>
-              <h3 className="font-sans text-xl font-bold text-[#F5EDED] mb-2">
+              {/* <h3 className="font-sans text-xl font-bold text-[#F5EDED] mb-2">
                 Accepting Strategic Advisory & Q4 Retainers
-              </h3>
+              </h3> */}
               <p className="text-sm text-[#dac1c1] leading-relaxed mb-6">
-                Currently open for consulting sprints, BI migrations, and high-stakes data
+                Currently open for BI migrations, and high-stakes data
                 requirements engagements worldwide.
               </p>
 

@@ -39,10 +39,24 @@
     0%, 100% { transform: translateY(0); }
     50%      { transform: translateY(-10px); }
   }
+
+  @keyframes projectFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+.animate-project-fade {
+  animation: projectFadeIn 320ms cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 html {
-  scroll-behavior: smooth;
   color-scheme: dark;
 }
 

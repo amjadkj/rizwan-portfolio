@@ -7,48 +7,48 @@ import { ContainerScroll, CardSticky } from "@/components/ui/cards-stack";
 const STEPS = [
   {
     step: "01",
-    title: "Diagnostic & Stakeholder Immersion",
+    title: "Business Needs Assessment",
     icon: Search,
     timeframe: "Week 1 - 2",
     summary:
-      "Deep-dive interviews with department leaders to dissect operational pain points, quantify baseline bottlenecks, and define unambiguous success criteria.",
-    deliverable: "Baseline KPI Blueprint & Stakeholder Alignment Matrix",
+      "Identify business problems, define objectives, assess root causes and establish success criteria.",
+    // deliverable: "Baseline KPI Blueprint & Stakeholder Alignment Matrix",
   },
   {
     step: "02",
-    title: "Quantitative Audit & Schema Reconnaissance",
+    title: "Stakeholder Engagement & Requirements Elicitation",
     icon: Database,
     timeframe: "Week 3 - 4",
     summary:
-      "Direct SQL interrogations of transactional repositories, ERP logs, and warehouse tables to audit lineage integrity, null-value ratios, and data hygiene.",
-    deliverable: "Data Hygiene Scorecard & Dimensional Schema Plan",
+      "Identify stakeholders, gather business requirements, analyse user needs and document expectations.",
+    // deliverable: "Data Hygiene Scorecard & Dimensional Schema Plan",
   },
   {
     step: "03",
-    title: "Hypothesis Testing & Agile Prototyping",
+    title: "Business Process Modelling & Gap Analysis",
     icon: LineChart,
     timeframe: "Week 5 - 6",
     summary:
-      "Rapidly constructing interactive telemetry wireframes and testing statistical assumptions with power users to validate business logic before full engineering.",
-    deliverable: "Interactive Sandbox Dashboard & Acceptance Criteria",
+      "Analyse AS-IS and TO-BE processes, identify inefficiencies, assess gaps and define improvement opportunities.",
+    // deliverable: "Interactive Sandbox Dashboard & Acceptance Criteria",
   },
   {
     step: "04",
-    title: "Production Systems Deployment",
+    title: "Requirements Analysis & Data-Driven Insights",
     icon: Cpu,
     timeframe: "Week 7 - 8",
     summary:
-      "Deploying high-performance SQL models, optimized DAX semantic layers, automated incremental refreshes, and granular row-level security.",
-    deliverable: "Production Telemetry Cockpit & Validated ETL Pipelines",
+      "Analyse and prioritise requirements, validate business needs, examine data and identify actionable insights.",
+    // deliverable: "Production Telemetry Cockpit & Validated ETL Pipelines",
   },
   {
     step: "05",
-    title: "Governance & Measured Value Realization",
+    title: "Solution Evaluation & Recommendations",
     icon: Award,
     timeframe: "Post-Launch",
     summary:
-      "Conducting structured team training sessions, establishing automated alerting thresholds, and quantifying achieved cost reduction and velocity gains.",
-    deliverable: "Change Management SOP & Executive ROI Report",
+      "Evaluate solution options, assess feasibility, analyse risks and benefits, and recommend improvements aligned with business objectives.",
+    // deliverable: "Change Management SOP & Executive ROI Report",
   },
 ];
 
@@ -115,14 +115,14 @@ export function ProcessSection() {
                   </p>
 
                   {/* Deliverable Footer */}
-                  <div className="pt-4 border-t border-white/10">
+                  {/* <div className="pt-4 border-t border-white/10">
                     <span className="block font-grotesk text-[10px] uppercase tracking-wider text-[#ffb3b0]">
                       Primary Deliverable:
                     </span>
                     <span className="block font-sans text-xs text-[#F5EDED] font-medium mt-1">
                       {s.deliverable}
                     </span>
-                  </div>
+                  </div> */}
                 </CardSticky>
               );
             })}

@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import Image from "next/image";
 import { X, Menu } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
 import { cn } from "@/lib/utils";
@@ -52,9 +53,14 @@ export function MobileNav({ activeSection }: MobileNavProps) {
             {/* Top Bar inside sheet */}
             <div className="flex items-center justify-between pb-6 border-b border-white/10">
               <div className="flex items-center gap-2.5">
-                <div className="grid size-8 place-items-center rounded-lg border border-white/15 bg-white/5 font-mono text-xs font-semibold text-[#F5EDED]">
-                  {siteConfig.firstName[0]}
-                  {siteConfig.lastName[0]}
+                <div className="relative size-8 overflow-hidden rounded-full border border-white/20 bg-white/5 p-0.5 shadow-[0_0_10px_rgba(229,72,77,0.3)]">
+                  <Image
+                    src="/logo.png"
+                    alt={`${siteConfig.name} Logo`}
+                    width={32}
+                    height={32}
+                    className="size-full object-contain rounded-full"
+                  />
                 </div>
                 <span className="font-sans text-sm font-semibold tracking-wide text-[#F5EDED]">
                   {siteConfig.name}
