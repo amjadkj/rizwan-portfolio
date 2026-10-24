@@ -4,7 +4,7 @@ export const siteConfig = {
   lastName: "Shaji",
   role: "Business Analyst",
   bookingUrl: "https://calendly.com/your-handle",
-  email: "you@example.com",
+  email: "rizwanrizz808944@gmail.com",
   phone: "+44 7733620478",
   location: "UK",
   nav: [
@@ -17,9 +17,9 @@ export const siteConfig = {
     { id: "contact", label: "Contact" },
   ],
   socials: [
-    { id: "linkedin", label: "LinkedIn", href: "https://linkedin.com/in/your-handle" },
-    { id: "github", label: "GitHub", href: "https://github.com/your-handle" },
-    { id: "instagram", label: "Instagram", href: "https://instagram.com/your-handle" },
-    { id: "mail", label: "Email", href: "mailto:you@example.com" },
+    { id: "linkedin", label: "LinkedIn", href: "http://www.linkedin.com/in/rizwanks" },
+    { id: "github", label: "GitHub", href: "https://github.com/rizwanshaji" },
+    { id: "instagram", label: "Instagram", href: "https://www.instagram.com/ri_z_wan__/" },
+    { id: "mail", label: "Email", href: "mailto:rizwanrizz808944@gmail.com" },
   ],
 } as const;

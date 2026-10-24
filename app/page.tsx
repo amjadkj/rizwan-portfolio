@@ -1,5 +1,5 @@
 import { SiteHeader } from "@/components/layout/site-header";
-import { Hero } from "@/components/sections/hero";
+import { HeroScroll } from "@/components/sections/HeroScroll";
 import { ProjectsSection } from "@/components/sections/projects";
 import { TechnologiesSection } from "@/components/sections/technologies";
 import { ProcessSection } from "@/components/sections/process";
@@ -7,6 +7,7 @@ import { JourneySection } from "@/components/sections/journey";
 import { CertificationsSection } from "@/components/sections/certifications";
 import { ContactSection } from "@/components/sections/contact";
 import { SiteFooter } from "@/components/sections/site-footer";
+import { Hero } from "@/components/sections/hero";
 
 export default function Home() {
   return (
@@ -16,8 +17,11 @@ export default function Home() {
 
       {/* Main Content Sections */}
       <main className="flex-1 flex flex-col">
+        {/* Scroll-Driven Canvas Hero Sequence */}
         {/* Hero Section */}
         <Hero />
+
+        <HeroScroll />
 
         {/* Selected Projects (Slider with Impact Metrics) */}
         <ProjectsSection />

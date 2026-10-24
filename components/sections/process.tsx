@@ -50,6 +50,15 @@ const STEPS = [
       "Evaluate solution options, assess feasibility, analyse risks and benefits, and recommend improvements aligned with business objectives.",
     // deliverable: "Change Management SOP & Executive ROI Report",
   },
+  {
+    step: "06",
+    title: "Solution Validation & Continuous Improvement",
+    icon: Award,
+    timeframe: "Post-Launch",
+    summary:
+      "Support User Acceptance Testing (UAT), verify requirements against acceptance criteria, evaluate business outcomes and identify opportunities for optimisation.",
+    // deliverable: "Change Management SOP & Executive ROI Report",
+  },
 ];
 
 export function ProcessSection() {
