@@ -18,7 +18,7 @@ export function SiteFooter() {
         {/* Top: Large Typographic Brand Authority */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 pb-16 border-b border-white/10">
           <div>
-            <div className="flex items-center gap-3.5 mb-5">
+            {/* <div className="flex items-center gap-3.5 mb-5">
               <div className="relative size-11 overflow-hidden rounded-full border border-white/20 bg-white/5 p-0.5 shadow-[0_0_16px_rgba(229,72,77,0.35)]">
                 <Image
                   src="/logo.png"
@@ -31,7 +31,7 @@ export function SiteFooter() {
               <span className="font-grotesk text-xs uppercase tracking-[0.14em] text-[#ffdad4] font-medium">
                 {siteConfig.name}
               </span>
-            </div>
+            </div> */}
             <h2 className="font-display text-4xl sm:text-5xl lg:text-7xl font-bold uppercase tracking-tight text-[#F5EDED]">
               {siteConfig.name}
             </h2>

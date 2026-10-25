@@ -30,7 +30,7 @@ export function SiteHeader() {
           href="#home"
           className="group flex items-center gap-3 transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-[#E5484D]/40 rounded-full"
         >
-          <div className="relative size-9 overflow-hidden rounded-full border border-white/20 bg-white/5 p-0.5 shadow-[0_0_12px_rgba(229,72,77,0.35)] transition-transform duration-300 group-hover:scale-105">
+          {/* <div className="relative size-9 overflow-hidden rounded-full border border-white/20 bg-white/5 p-0.5 shadow-[0_0_12px_rgba(229,72,77,0.35)] transition-transform duration-300 group-hover:scale-105">
             <Image
               src="/logo.png"
               alt={`${siteConfig.name} Logo`}
@@ -39,7 +39,7 @@ export function SiteHeader() {
               className="size-full object-contain rounded-full"
               priority
             />
-          </div>
+          </div> */}
           <div className="flex items-center gap-3">
             <span className="font-sans text-[18px] font-semibold text-[#F5EDED] tracking-tight">
               {siteConfig.name}

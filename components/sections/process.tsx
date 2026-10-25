@@ -80,7 +80,7 @@ export function ProcessSection() {
               <span className="text-[#E5484D]">Roadmap</span>
             </h2>
             <p className="max-w-prose text-sm sm:text-base text-[#BFA7A7] leading-relaxed">
-              A rigorous, 5-phase delivery methodology designed to eliminate
+              A rigorous, 6-phase delivery methodology designed to eliminate
               ambiguity, align stakeholders, and extract high-certainty business
               value from enterprise data.
             </p>

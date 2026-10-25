@@ -1,5 +1,4 @@
 import { SiteHeader } from "@/components/layout/site-header";
-import { HeroScroll } from "@/components/sections/HeroScroll";
 import { ProjectsSection } from "@/components/sections/projects";
 import { TechnologiesSection } from "@/components/sections/technologies";
 import { ProcessSection } from "@/components/sections/process";
@@ -17,11 +16,8 @@ export default function Home() {
 
       {/* Main Content Sections */}
       <main className="flex-1 flex flex-col">
-        {/* Scroll-Driven Canvas Hero Sequence */}
         {/* Hero Section */}
         <Hero />
-
-        <HeroScroll />
 
         {/* Selected Projects (Slider with Impact Metrics) */}
         <ProjectsSection />

@@ -19,7 +19,7 @@ export function Hero() {
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-20 h-[78svh] md:h-[88svh] w-full max-w-[800px] flex items-end justify-center pointer-events-none select-none">
         <div className="relative h-full w-full [mask-image:linear-gradient(to_top,transparent_0%,black_12%)]">
           <Image
-            src="/images/rizwan-front1.png"
+            src="/images/riz.png"
             alt={`Portrait of ${siteConfig.name}`}
             fill
             priority

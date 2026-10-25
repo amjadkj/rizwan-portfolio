@@ -1,1 +1,0 @@
-export { HeroScroll } from "./HeroScroll";

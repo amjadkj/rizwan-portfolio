@@ -27,13 +27,13 @@ const PROJECTS: Project[] = [
     category: "Operations & BI",
     client: "OLIST E-COMMERCE",
     impactMetrics: {
-      primary: "+19.81%",
-      primaryLabel: "Increased Rating Proportion",
-      secondary: "+15%",
-      secondaryLabel: "Delivery Performance",
+      primary: "14.69%",
+      primaryLabel: "Low Customer Satisfaction Rate",
+      secondary: "6.66%",
+      secondaryLabel: "Late Delivery Rate",
     },
     summary:
-      "Analysed customer reviews across the Olist Brazilian e-commerce marketplace using Power BI and Power Query to investigate low customer satisfaction, delivery performance, and product category trends.",
+      "Analysed customer review data from the Olist Brazilian e-commerce marketplace using Power BI and Power Query to investigate low customer satisfaction, assess delivery performance, compare product category trends, and identify opportunities for data-driven business improvements.",
     deliverables: [
       "Delivery Performance & Low-Rating Analysis",
       "Seller Performance Monitoring",
@@ -220,7 +220,7 @@ export function ProjectsSection() {
                 <div className="rounded-2xl border border-white/15 bg-white/5 p-6 md:p-8 backdrop-blur-xl shadow-inner">
                   <div className="flex items-center gap-2 text-xs font-grotesk uppercase tracking-wider text-[#ffdad4] mb-6">
                     <TrendingUp className="size-4 text-[#E5484D]" />
-                    <span>Validated Business Impact</span>
+                    <span>Key Project Findings</span>
                   </div>
 
                   {/* Primary Metric */}

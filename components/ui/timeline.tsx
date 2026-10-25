@@ -81,7 +81,92 @@ export type JourneyItem = {
   content: string;
   tag?: string;
   image?: string;
+  video?: string;
 };
+
+function isVideoUrl(url?: string): boolean {
+  if (!url) return false;
+  return (
+    /\.(mp4|webm|ogg|mov|m4v)(\?.*)?$/i.test(url) ||
+    /youtube\.com|youtu\.be|vimeo\.com/i.test(url)
+  );
+}
+
+function getEmbedUrl(url: string): string | null {
+  const ytMatch = url.match(
+    /(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=|shorts\/))([\w-]{11})/
+  );
+  if (ytMatch) {
+    return `https://www.youtube.com/embed/${ytMatch[1]}?autoplay=1&mute=1&loop=1&playlist=${ytMatch[1]}&controls=0&showinfo=0&rel=0`;
+  }
+  const vimeoMatch = url.match(
+    /vimeo\.com\/(?:channels\/(?:\w+\/)?|groups\/([^\/]*)\/videos\/|album\/(\d+)\/video\/|)(\d+)/
+  );
+  if (vimeoMatch) {
+    return `https://player.vimeo.com/video/${vimeoMatch[3]}?autoplay=1&muted=1&loop=1&background=1`;
+  }
+  return null;
+}
+
+function MilestoneMediaTile({ item }: { item: JourneyItem }) {
+  const videoSrc = item.video || (isVideoUrl(item.image) ? item.image : undefined);
+  const imageSrc = item.video ? item.image : (isVideoUrl(item.image) ? undefined : item.image);
+
+  if (!videoSrc && !imageSrc) return null;
+
+  const embedUrl = videoSrc ? getEmbedUrl(videoSrc) : null;
+
+  return (
+    <div className="relative h-[8vw] w-full max-[600px]:h-[26vw] overflow-hidden rounded-xl mb-3 border border-white/10 bg-black/40">
+      {videoSrc ? (
+        embedUrl ? (
+          <iframe
+            src={embedUrl}
+            title={item.title || item.year}
+            className="h-full w-full object-cover pointer-events-none scale-125"
+            allow="autoplay; encrypted-media"
+          />
+        ) : (
+          <video
+            src={videoSrc}
+            poster={imageSrc}
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+          />
+        )
+      ) : (
+        <img
+          src={imageSrc}
+          alt={item.title || item.year}
+          className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+        />
+      )}
+
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-[#180202]/90 via-transparent to-transparent pointer-events-none" />
+
+      {/* Tag Badge */}
+      {item.tag && (
+        <span className="absolute top-2 left-2 rounded-md bg-[#050000]/80 px-2 py-0.5 font-grotesk text-[9px] md:text-[11px] font-semibold uppercase tracking-wider text-[#ffdad4] border border-white/15 backdrop-blur-sm pointer-events-none">
+          {item.tag}
+        </span>
+      )}
+
+      {/* Year & Month Footer */}
+      <div className="absolute bottom-1.5 left-2.5 right-2.5 flex items-center justify-between pointer-events-none">
+        <span className="font-grotesk text-[11px] md:text-[13px] font-bold text-[#F5EDED]">
+          {item.year}
+        </span>
+        <span className="font-grotesk text-[10px] md:text-[12px] text-[#ffb3b0]">
+          {item.month}
+        </span>
+      </div>
+    </div>
+  );
+}
 
 type SplitTextInstance = InstanceType<typeof SplitText>;
 
@@ -481,7 +566,7 @@ export default function Timeline({
                 src={imageUrl}
                 alt={imageAlt}
                 draggable={false}
-                className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                className="h-full w-full object-contain transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#050000] via-[#050000]/40 to-transparent" />
               <div className="absolute bottom-5 left-5 right-5">
@@ -551,30 +636,8 @@ export default function Timeline({
                     <div
                       className={`card-${item.id} relative rounded-2xl border border-white/15 bg-[rgba(24,2,2,0.88)] p-3 md:p-4 shadow-[0_16px_36px_rgba(0,0,0,0.6)] backdrop-blur-2xl transition-all duration-300 hover:border-white/35 hover:shadow-[0_20px_40px_rgba(229,72,77,0.25)]`}
                     >
-                      {/* Image Tile */}
-                      {item.image && (
-                        <div className="relative h-[8vw] w-full max-[600px]:h-[26vw] overflow-hidden rounded-xl mb-3 border border-white/10">
-                          <img
-                            src={item.image}
-                            alt={item.title || item.year}
-                            className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
-                          />
-                          <div className="absolute inset-0 bg-gradient-to-t from-[#180202]/90 via-transparent to-transparent" />
-                          {item.tag && (
-                            <span className="absolute top-2 left-2 rounded-md bg-[#050000]/80 px-2 py-0.5 font-grotesk text-[9px] md:text-[11px] font-semibold uppercase tracking-wider text-[#ffdad4] border border-white/15 backdrop-blur-sm">
-                              {item.tag}
-                            </span>
-                          )}
-                          <div className="absolute bottom-1.5 left-2.5 right-2.5 flex items-center justify-between">
-                            <span className="font-grotesk text-[11px] md:text-[13px] font-bold text-[#F5EDED]">
-                              {item.year}
-                            </span>
-                            <span className="font-grotesk text-[10px] md:text-[12px] text-[#ffb3b0]">
-                              {item.month}
-                            </span>
-                          </div>
-                        </div>
-                      )}
+                      {/* Media Tile (Image or Video) */}
+                      <MilestoneMediaTile item={item} />
 
                       {/* Content Area */}
                       <div>
@@ -635,30 +698,8 @@ export default function Timeline({
                     <div
                       className={`card-${item.id} relative rounded-2xl border border-white/15 bg-[rgba(24,2,2,0.88)] p-3 md:p-4 shadow-[0_16px_36px_rgba(0,0,0,0.6)] backdrop-blur-2xl transition-all duration-300 hover:border-white/35 hover:shadow-[0_20px_40px_rgba(229,72,77,0.25)]`}
                     >
-                      {/* Image Tile */}
-                      {item.image && (
-                        <div className="relative h-[8vw] w-full max-[600px]:h-[26vw] overflow-hidden rounded-xl mb-3 border border-white/10">
-                          <img
-                            src={item.image}
-                            alt={item.title || item.year}
-                            className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
-                          />
-                          <div className="absolute inset-0 bg-gradient-to-t from-[#180202]/90 via-transparent to-transparent" />
-                          {item.tag && (
-                            <span className="absolute top-2 left-2 rounded-md bg-[#050000]/80 px-2 py-0.5 font-grotesk text-[9px] md:text-[11px] font-semibold uppercase tracking-wider text-[#ffdad4] border border-white/15 backdrop-blur-sm">
-                              {item.tag}
-                            </span>
-                          )}
-                          <div className="absolute bottom-1.5 left-2.5 right-2.5 flex items-center justify-between">
-                            <span className="font-grotesk text-[11px] md:text-[13px] font-bold text-[#F5EDED]">
-                              {item.year}
-                            </span>
-                            <span className="font-grotesk text-[10px] md:text-[12px] text-[#ffb3b0]">
-                              {item.month}
-                            </span>
-                          </div>
-                        </div>
-                      )}
+                      {/* Media Tile (Image or Video) */}
+                      <MilestoneMediaTile item={item} />
 
                       {/* Content Area */}
                       <div>
