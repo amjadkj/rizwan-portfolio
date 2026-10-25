@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import { createPortal } from "react-dom";
 import Image from "next/image";
 import { X, Menu } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
@@ -12,6 +13,11 @@ interface MobileNavProps {
 
 export function MobileNav({ activeSection }: MobileNavProps) {
   const [isOpen, setIsOpen] = React.useState(false);
+  const [mounted, setMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
 
   // Prevent scrolling when sheet is open
   React.useEffect(() => {
@@ -40,16 +46,17 @@ export function MobileNav({ activeSection }: MobileNavProps) {
         {isOpen ? <X className="size-5" /> : <Menu className="size-5" />}
       </button>
 
-      {/* Backdrop & Sheet */}
-      {isOpen && (
-        <div
-          className="fixed inset-0 z-50 flex flex-col bg-black/70 backdrop-blur-xl animate-in fade-in duration-200"
-          onClick={() => setIsOpen(false)}
-        >
+      {/* Backdrop & Sheet (Portaled to document.body so transformed header doesn't trap fixed positioning) */}
+      {isOpen && mounted &&
+        createPortal(
           <div
-            className="ml-auto flex h-full w-[min(340px,85vw)] flex-col border-l border-white/15 bg-[rgba(24,2,2,0.92)] p-6 shadow-2xl backdrop-blur-2xl animate-in slide-in-from-right duration-300"
-            onClick={(e) => e.stopPropagation()}
+            className="fixed inset-0 z-[100] flex bg-black/85 backdrop-blur-xl animate-in fade-in duration-200"
+            onClick={() => setIsOpen(false)}
           >
+            <div
+              className="ml-auto flex h-full w-[min(340px,85vw)] flex-col border-l border-white/10 bg-[#070101] p-6 shadow-[0_0_80px_rgba(0,0,0,0.95)] backdrop-blur-2xl animate-in slide-in-from-right duration-300"
+              onClick={(e) => e.stopPropagation()}
+            >
             {/* Top Bar inside sheet */}
             <div className="flex items-center justify-between pb-6 border-b border-white/10">
               <div className="flex items-center gap-2.5">
@@ -120,7 +127,8 @@ export function MobileNav({ activeSection }: MobileNavProps) {
               </a>
             </div>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </div>
   );
