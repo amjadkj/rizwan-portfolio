@@ -1,0 +1,119 @@
+.tds-cldemo {
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+  padding: clamp(16px, 2.78vw, 40px);
+  background: #ffffff;
+  color: #0a0a0a;
+  font-family: var(--tds-sans, system-ui, sans-serif);
+}
+
+.tds-cldemo__bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.tds-cldemo__bar nav {
+  display: flex;
+  gap: 28px;
+}
+
+.tds-cldemo__bar a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.tds-cldemo__bar a:hover {
+  color: #d71212;
+}
+
+.tds-cldemo__bar button {
+  font: inherit;
+  text-transform: inherit;
+  letter-spacing: inherit;
+  padding: 8px 14px;
+  border: 1px solid #0a0a0a;
+  border-radius: 999px;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.tds-cldemo__bar button:hover {
+  background: #0a0a0a;
+  color: #ffffff;
+}
+
+.tds-cldemo__mid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: end;
+  gap: 32px;
+  padding: 48px 0 24px;
+}
+
+.tds-cldemo__lede {
+  max-width: 420px;
+  margin: 0;
+  font-size: clamp(18px, 1.6vw, 24px);
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+.tds-cldemo__dot {
+  display: inline-block;
+  width: 0.42em;
+  height: 0.42em;
+  margin-left: 0.2em;
+  background: #d71212;
+}
+
+.tds-cldemo__photo {
+  margin: 0;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  filter: grayscale(1) contrast(1.05);
+}
+
+.tds-cldemo__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.tds-cldemo__markbox {
+  overflow: hidden;
+}
+
+.tds-cldemo__mark {
+  margin: 0 0 -0.12em;
+  font-family: var(--tds-display, system-ui, sans-serif);
+  font-weight: 900;
+  font-stretch: 125%;
+  font-size: 100px;
+  line-height: 0.9;
+  letter-spacing: -0.045em;
+  white-space: nowrap;
+  width: max-content;
+}
+
+@media (max-width: 767px) {
+  .tds-cldemo__bar nav {
+    display: none;
+  }
+
+  .tds-cldemo__mid {
+    grid-template-columns: 1fr;
+    align-content: end;
+  }
+
+  .tds-cldemo__photo {
+    aspect-ratio: 4 / 5;
+  }
+}

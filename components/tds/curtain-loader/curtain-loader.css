@@ -1,0 +1,34 @@
+.tds-curtain {
+  position: fixed;
+  inset: 0;
+  will-change: transform;
+}
+
+.tds-curtain--back {
+  z-index: 9998;
+  background: var(--tds-curtain-back, #d71212);
+}
+
+.tds-curtain--front {
+  z-index: 9999;
+  background: var(--tds-curtain-front, #0a0a0a);
+  color: var(--tds-curtain-text, #ffffff);
+}
+
+.tds-curtain--done {
+  pointer-events: none;
+}
+
+.tds-curtain__count {
+  position: absolute;
+  left: clamp(20px, 2.78vw, 40px);
+  bottom: clamp(16px, 4vw, 48px);
+  margin: 0;
+  font-family: var(--tds-display, system-ui, sans-serif);
+  font-weight: 800;
+  font-stretch: 125%;
+  font-size: clamp(120px, 22vw, 320px);
+  line-height: 0.8;
+  letter-spacing: -0.04em;
+  font-variant-numeric: tabular-nums;
+}

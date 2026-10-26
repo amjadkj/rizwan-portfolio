@@ -10,7 +10,7 @@ const RIZWAN_TOP_JOURNEY: JourneyItem[] = [
     month: "June",
     title: "Bachelor of Business Administration (BBA)",
     tag: "Bachelor's Degree",
-    content: "Undergraduate degree blending strategic business management, financial analysis, marketing principles, and data-driven decision-making.",
+    content: "Undergraduate degree blending Strategic Business Management, Finance, and Marketing.",
     image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=600&q=80",
   },
   {
@@ -19,7 +19,7 @@ const RIZWAN_TOP_JOURNEY: JourneyItem[] = [
     month: "October",
     title: "M.S. in International Business Management",
     tag: "Master's Degree",
-    content: "Specialized in International Business Management, blending global business strategies, international trade, cross-cultural management, financial analysis, and strategic decision-making in global markets.",
+    content: "Global Business Strategy, Trade, and Management.",
     video: "/videos/ms.mp4",
   },
   {
@@ -28,19 +28,19 @@ const RIZWAN_TOP_JOURNEY: JourneyItem[] = [
     month: "June",
     title: "Welfare Officer",
     tag: "SOS Property Management Ltd",
-    content: "Managed employee welfare and workplace well-being through proactive risk assessments, confidential recordkeeping, GDPR compliance, analytical reporting.",
+    content: "Managed employee welfare, compliance, and reporting.",
     image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=80",
   },
 ];
 
 const RIZWAN_BOTTOM_JOURNEY: JourneyItem[] = [
   {
-    id: "2021-march",
+    id: "2021-august",
     year: "2021",
     month: "August",
     title: "Manager",
-    tag: "OmniLogistics",
-    content: "Managed daily business operations, invoice processing, financial recordkeeping, and administrative workflows, ensuring accuracy, operational efficiency, and smooth business management.",
+    tag: "Bio Tech Fuels",
+    content: "Managed business operations, invoicing, and finances.",
     image: "/images/manager.png",
   },
   {
@@ -49,16 +49,16 @@ const RIZWAN_BOTTOM_JOURNEY: JourneyItem[] = [
     month: "June",
     title: "Welfare Officer",
     tag: "Sharp Catering Hotels Ltd",
-    content: "Supported workforce well-being and operational efficiency through workplace risk assessments, employee relations, administrative management, and strategic collaboration.",
+    content: "Enhanced workforce well-being and operational efficiency.",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80",
   },
   {
-    id: "2026-may",
+    id: "2026-august",
     year: "2026",
-    month: "May",
-    title: "Freelance Business Analyst",
-    tag: "Self Employed",
-    content: "Analyzed business operations, identified process inefficiencies, gathered stakeholder requirements, and translated data insights into actionable strategies to optimize workflows, improve operational performance.",
+    month: "August",
+    title: "Aspiring Business Analyst",
+    // tag: "Self Learned",
+    content: "Optimized business processes through data-driven insights.",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80",
   },
 ];

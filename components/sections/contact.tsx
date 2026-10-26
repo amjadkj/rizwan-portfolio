@@ -256,7 +256,7 @@ export function ContactSection() {
           </div>
 
           {/* Right Column: Direct Connect & Availability */}
-          <div className="lg:col-span-5 flex flex-col justify-between gap-6">
+          <div className="lg:col-span-5 flex flex-col justify-between gap-2">
             {/* Status & Availability Card */}
             <div className="rounded-2xl border border-white/15 bg-[rgba(24,2,2,0.75)] p-6 md:p-8 backdrop-blur-2xl">
               <div className="flex items-center gap-2 mb-4">
@@ -268,15 +268,11 @@ export function ContactSection() {
                   Current Availability
                 </span>
               </div>
-              {/* <h3 className="font-sans text-xl font-bold text-[#F5EDED] mb-2">
-                Accepting Strategic Advisory & Q4 Retainers
-              </h3> */}
               <p className="text-sm text-[#dac1c1] leading-relaxed mb-6">
                 Currently open for BI migrations, and high-stakes data
                 requirements engagements worldwide.
               </p>
 
-              {/* Instant Calendar Scheduler Link */}
               <a
                 href={siteConfig.bookingUrl}
                 target="_blank"

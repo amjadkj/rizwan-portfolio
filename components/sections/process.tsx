@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import Image from "next/image";
 import { Search, Database, LineChart, Cpu, Award } from "lucide-react";
 import { ContainerScroll, CardSticky } from "@/components/ui/cards-stack";
 
@@ -79,11 +80,20 @@ export function ProcessSection() {
               The Strategic Execution{" "}
               <span className="text-[#E5484D]">Roadmap</span>
             </h2>
-            <p className="max-w-prose text-sm sm:text-base text-[#BFA7A7] leading-relaxed">
+            {/* <p className="max-w-prose text-sm sm:text-base text-[#BFA7A7] leading-relaxed">
               A rigorous, 6-phase delivery methodology designed to eliminate
               ambiguity, align stakeholders, and extract high-certainty business
               value from enterprise data.
-            </p>
+            </p> */}
+            <div className="relative mt-6 w-full aspect-[4/3] max-w-[480px]">
+              <Image
+                src="/images/riz-process.png"
+                alt="Process illustration"
+                fill
+                sizes="(min-width: 768px) 40vw, 90vw"
+                className="object-contain"
+              />
+            </div>
           </div>
 
           {/* Right Column: Sticky Stacking Cards */}

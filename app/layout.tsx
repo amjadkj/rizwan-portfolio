@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { Inter, Space_Grotesk, Playfair_Display } from "next/font/google";
-import { SmoothScrollProvider } from "@/components/providers/smooth-scroll";
+import { Inter, Space_Grotesk, Playfair_Display, Archivo, Geist } from "next/font/google";
+import { CurtainLoader } from "@/components/tds/curtain-loader/CurtainLoader";
 import "./globals.css";
 
 const inter = Inter({
@@ -20,6 +20,19 @@ const playfair = Playfair_Display({
   subsets: ["latin"],
   display: "swap",
   weight: ["400", "600", "700"],
+});
+
+const archivo = Archivo({
+  variable: "--tds-display",
+  subsets: ["latin"],
+  axes: ["wdth"],
+  display: "swap",
+});
+
+const geist = Geist({
+  variable: "--tds-sans",
+  subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -55,13 +68,15 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`dark ${inter.variable} ${spaceGrotesk.variable} ${playfair.variable}`}
+      className={`dark ${inter.variable} ${spaceGrotesk.variable} ${playfair.variable} ${archivo.variable} ${geist.variable}`}
     >
       <body className="min-h-screen text-[#F5EDED] selection:bg-[#E5484D]/30 selection:text-[#F5EDED] antialiased">
-        {/* <SmoothScrollProvider>{children}</SmoothScrollProvider> */}
-       {children}
+        <CurtainLoader>
+          {children}
+        </CurtainLoader>
       </body>
     </html>
   );
 }
+
 

@@ -7,6 +7,7 @@ import { CertificationsSection } from "@/components/sections/certifications";
 import { ContactSection } from "@/components/sections/contact";
 import { SiteFooter } from "@/components/sections/site-footer";
 import { Hero } from "@/components/sections/hero";
+import { About } from "@/components/sections/about";
 
 export default function Home() {
   return (
@@ -18,6 +19,9 @@ export default function Home() {
       <main className="flex-1 flex flex-col">
         {/* Hero Section */}
         <Hero />
+
+        {/* About Me Section */}
+        <About />
 
         {/* Selected Projects (Slider with Impact Metrics) */}
         <ProjectsSection />

@@ -9,6 +9,7 @@ export const siteConfig = {
   location: "UK",
   nav: [
     { id: "home", label: "Home" },
+    { id: "about", label: "About" },
     { id: "projects", label: "Projects" },
     { id: "technologies", label: "Technologies" },
     { id: "process", label: "Process" },
