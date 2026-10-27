@@ -1,0 +1,379 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e4]:
+        - link "Rizwan Shaji Business Analyst" [ref=e5] [cursor=pointer]:
+          - /url: "#home"
+          - generic [ref=e6]:
+            - generic [ref=e7]: Rizwan Shaji
+            - generic [ref=e9]: Business Analyst
+        - navigation "Primary" [ref=e10]:
+          - link "Home" [ref=e11] [cursor=pointer]:
+            - /url: "#home"
+          - link "About" [ref=e12] [cursor=pointer]:
+            - /url: "#about"
+          - link "Projects" [ref=e13] [cursor=pointer]:
+            - /url: "#projects"
+          - link "Technologies" [ref=e14] [cursor=pointer]:
+            - /url: "#technologies"
+          - link "Process" [ref=e15] [cursor=pointer]:
+            - /url: "#process"
+          - link "Journey" [ref=e16] [cursor=pointer]:
+            - /url: "#journey"
+          - link "Certifications" [ref=e17] [cursor=pointer]:
+            - /url: "#certifications"
+          - link "Contact" [ref=e18] [cursor=pointer]:
+            - /url: "#contact"
+        - link "Hire Me" [ref=e20] [cursor=pointer]:
+          - /url: "#contact"
+    - main [ref=e21]:
+      - generic [ref=e22]:
+        - generic:
+          - generic:
+            - img "Portrait of Rizwan Shaji"
+        - heading "Rizwan Shaji" [level=1]:
+          - generic: Rizwan
+          - generic: Shaji
+        - generic:
+          - paragraph:
+            - generic: Business
+            - generic: Analyst
+        - generic [ref=e23]:
+          - link "LinkedIn" [ref=e25] [cursor=pointer]:
+            - /url: http://www.linkedin.com/in/rizwanks
+          - link "GitHub" [ref=e29] [cursor=pointer]:
+            - /url: https://github.com/rizwanshaji
+          - link "Instagram" [ref=e33] [cursor=pointer]:
+            - /url: https://www.instagram.com/ri_z_wan__/
+          - link "Email" [ref=e37] [cursor=pointer]:
+            - /url: mailto:rizwanrizz808944@gmail.com
+      - region [ref=e41]:
+        - generic [ref=e43]:
+          - generic [ref=e44]:
+            - generic [ref=e45]: About Me
+            - heading "Turning structured analysis into clear decisions." [level=2] [ref=e48]
+            - paragraph [ref=e49]: MSc International Business Management graduate with experience in operational processes, record management, data accuracy and stakeholder coordination. Developing practical business analysis skills through structured case studies focused on problem definition, requirements elicitation, process improvement and data-informed decision-making. Experienced in using Excel, Power BI and Power Query to organise information, investigate patterns and communicate findings.
+            - generic [ref=e50]:
+              - generic [ref=e51]: PROBLEM DEFINITION
+              - generic [ref=e52]: REQUIREMENTS ELICITATION
+              - generic [ref=e53]: PROCESS IMPROVEMENT
+              - generic [ref=e54]: DATA-INFORMED DECISIONS
+            - generic [ref=e55]:
+              - link "Book a Call" [ref=e56] [cursor=pointer]:
+                - /url: https://calendly.com/your-handle
+              - link "Download CV" [ref=e57] [cursor=pointer]:
+                - /url: "#contact"
+          - img "Portrait of Rizwan Shaji" [ref=e60]
+      - generic [ref=e62]:
+        - generic [ref=e63]:
+          - generic [ref=e64]:
+            - generic [ref=e65]: Strategic Case Studies
+            - heading "Featured Analytics Projects" [level=2] [ref=e68]
+          - generic [ref=e69]: 01 / 01
+        - generic [ref=e72]:
+          - generic [ref=e73]:
+            - generic [ref=e74]:
+              - generic [ref=e75]:
+                - generic [ref=e76]: Operations & BI
+                - generic [ref=e77]: "Client: OLIST E-COMMERCE"
+              - heading "BUSINESS ANALYSIS & BI PROJECT" [level=3] [ref=e78]
+              - paragraph [ref=e79]: Analysed customer review data from the Olist Brazilian e-commerce marketplace using Power BI and Power Query to investigate low customer satisfaction, assess delivery performance, compare product category trends, and identify opportunities for data-driven business improvements.
+              - generic [ref=e80]:
+                - heading "Core Solutions & Deliverables" [level=4] [ref=e81]
+                - list [ref=e82]:
+                  - listitem [ref=e83]:
+                    - generic [ref=e85]: Delivery Performance & Low-Rating Analysis
+                  - listitem [ref=e86]:
+                    - generic [ref=e88]: Seller Performance Monitoring
+                  - listitem [ref=e89]:
+                    - generic [ref=e91]: Product Category Satisfaction Analysis
+                  - listitem [ref=e92]:
+                    - generic [ref=e94]: Customer Feedback & Data Quality Reporting
+            - generic [ref=e95]:
+              - generic [ref=e96]: Power BI
+              - generic [ref=e97]: PowerQuery
+              - generic [ref=e98]: Excel
+          - generic [ref=e99]:
+            - generic [ref=e100]:
+              - generic [ref=e101]: Key Project Findings
+              - generic [ref=e106]:
+                - generic [ref=e107]: 14.69%
+                - generic [ref=e108]: Low Customer Satisfaction Rate
+              - generic [ref=e109]:
+                - generic [ref=e110]: 6.66%
+                - generic [ref=e111]: Late Delivery Rate
+            - generic [ref=e112]:
+              - button "Go to slide 1" [ref=e114]
+              - link "View Full Case Study" [ref=e115] [cursor=pointer]:
+                - /url: "#contact"
+      - generic [ref=e121]:
+        - generic [ref=e123]:
+          - generic [ref=e124]: Technology & Tooling Ecosystem
+          - heading "Engineered for Modern Enterprise Analytics" [level=2] [ref=e128]
+        - generic [ref=e130]:
+          - generic [ref=e131]:
+            - generic [ref=e134]: Power BI
+            - generic [ref=e136]: Business Intelligence
+          - generic [ref=e137]:
+            - generic [ref=e140]: SQL (Postgres/T-SQL)
+            - generic [ref=e142]: Data Querying
+          - generic [ref=e143]:
+            - generic [ref=e146]: Google BigQuery
+            - generic [ref=e148]: Big Data Processing
+          - generic [ref=e149]:
+            - generic [ref=e152]: Power BI
+            - generic [ref=e154]: Business Intelligence
+          - generic [ref=e155]:
+            - generic [ref=e158]: SQL (Postgres/T-SQL)
+            - generic [ref=e160]: Data Querying
+          - generic [ref=e161]:
+            - generic [ref=e164]: Google BigQuery
+            - generic [ref=e166]: Big Data Processing
+        - generic [ref=e168]:
+          - generic [ref=e169]:
+            - generic [ref=e172]: Jira Software
+            - generic [ref=e174]: Agile Project Tracking
+          - generic [ref=e175]:
+            - generic [ref=e178]: Confluence
+            - generic [ref=e180]: Requirements & Specs
+          - generic [ref=e181]:
+            - generic [ref=e186]: Advanced Excel / DAX
+            - generic [ref=e188]: Financial Modeling
+          - generic [ref=e189]:
+            - generic [ref=e194]: Process Modeling
+            - generic [ref=e196]: BPMN 2.0 & Flowcharts
+          - generic [ref=e197]:
+            - generic [ref=e200]: Statistical Inference
+            - generic [ref=e202]: Hypothesis Testing
+          - generic [ref=e203]:
+            - generic [ref=e206]: Jira Software
+            - generic [ref=e208]: Agile Project Tracking
+          - generic [ref=e209]:
+            - generic [ref=e212]: Confluence
+            - generic [ref=e214]: Requirements & Specs
+          - generic [ref=e215]:
+            - generic [ref=e220]: Advanced Excel / DAX
+            - generic [ref=e222]: Financial Modeling
+          - generic [ref=e223]:
+            - generic [ref=e228]: Process Modeling
+            - generic [ref=e230]: BPMN 2.0 & Flowcharts
+          - generic [ref=e231]:
+            - generic [ref=e234]: Statistical Inference
+            - generic [ref=e236]: Hypothesis Testing
+      - generic [ref=e239]:
+        - generic [ref=e240]:
+          - generic [ref=e241]: Structured Framework
+          - heading "The Strategic Execution Roadmap" [level=2] [ref=e245]
+          - paragraph [ref=e246]: A rigorous, 6-phase delivery methodology designed to eliminate ambiguity, align stakeholders, and extract high-certainty business value from enterprise data.
+        - generic [ref=e247]:
+          - generic [ref=e248]:
+            - generic [ref=e249]:
+              - generic [ref=e250]: Week 1 - 2
+              - generic [ref=e256]: "01"
+            - heading "Business Needs Assessment" [level=3] [ref=e257]
+            - paragraph [ref=e258]: Identify business problems, define objectives, assess root causes and establish success criteria.
+          - generic [ref=e259]:
+            - generic [ref=e260]:
+              - generic [ref=e261]: Week 3 - 4
+              - generic [ref=e268]: "02"
+            - heading "Stakeholder Engagement & Requirements Elicitation" [level=3] [ref=e269]
+            - paragraph [ref=e270]: Identify stakeholders, gather business requirements, analyse user needs and document expectations.
+          - generic [ref=e271]:
+            - generic [ref=e272]:
+              - generic [ref=e273]: Week 5 - 6
+              - generic [ref=e279]: "03"
+            - heading "Business Process Modelling & Gap Analysis" [level=3] [ref=e280]
+            - paragraph [ref=e281]: Analyse AS-IS and TO-BE processes, identify inefficiencies, assess gaps and define improvement opportunities.
+          - generic [ref=e282]:
+            - generic [ref=e283]:
+              - generic [ref=e284]: Week 7 - 8
+              - generic [ref=e290]: "04"
+            - heading "Requirements Analysis & Data-Driven Insights" [level=3] [ref=e291]
+            - paragraph [ref=e292]: Analyse and prioritise requirements, validate business needs, examine data and identify actionable insights.
+          - generic [ref=e293]:
+            - generic [ref=e294]:
+              - generic [ref=e295]: Post-Launch
+              - generic [ref=e301]: "05"
+            - heading "Solution Evaluation & Recommendations" [level=3] [ref=e302]
+            - paragraph [ref=e303]: Evaluate solution options, assess feasibility, analyse risks and benefits, and recommend improvements aligned with business objectives.
+          - generic [ref=e304]:
+            - generic [ref=e305]:
+              - generic [ref=e306]: Post-Launch
+              - generic [ref=e312]: "06"
+            - heading "Solution Validation & Continuous Improvement" [level=3] [ref=e313]
+            - paragraph [ref=e314]: Support User Acceptance Testing (UAT), verify requirements against acceptance criteria, evaluate business outcomes and identify opportunities for optimisation.
+      - generic [ref=e318]:
+        - generic [ref=e320]:
+          - img "Rizwan Shaji Professional Advisory" [ref=e321]
+          - generic [ref=e323]:
+            - generic [ref=e324]: Track Overview
+            - paragraph [ref=e325]: Interactive career roadmap detailing verified client advisory, system transformation, and high-impact analytics initiatives.
+        - generic [ref=e326]:
+          - generic [ref=e327]:
+            - generic [ref=e328]:
+              - generic [ref=e329]: Milestones
+              - heading "Career Trajectory" [level=2] [ref=e332]
+            - generic [ref=e333]:
+              - generic [ref=e335]:
+                - generic [ref=e336]:
+                  - img "Bachelor of Business Administration (BBA)" [ref=e337]
+                  - generic: Bachelor's Degree
+                  - generic:
+                    - generic: "2018"
+                    - generic: June
+                - generic [ref=e338]:
+                  - heading "Bachelor of Business Administration (BBA)" [level=4] [ref=e339]
+                  - paragraph [ref=e340]: Undergraduate degree blending Strategic Business Management, Finance, and Marketing.
+              - generic [ref=e342]:
+                - generic [ref=e343]:
+                  - generic: Master's Degree
+                  - generic:
+                    - generic: "2023"
+                    - generic: October
+                - generic [ref=e345]:
+                  - heading "M.S. in International Business Management" [level=4] [ref=e346]
+                  - paragraph [ref=e347]: Global Business Strategy, Trade, and Management.
+              - generic [ref=e349]:
+                - generic [ref=e350]:
+                  - img "Welfare Officer" [ref=e351]
+                  - generic: SOS Property Management Ltd
+                  - generic:
+                    - generic: "2026"
+                    - generic: June
+                - generic [ref=e352]:
+                  - heading "Welfare Officer" [level=4] [ref=e353]
+                  - paragraph [ref=e354]: Managed employee welfare, compliance, and reporting.
+          - generic [ref=e355]:
+            - paragraph [ref=e358]: 2017 — 2026
+            - generic [ref=e359]:
+              - generic [ref=e361]:
+                - generic [ref=e362]:
+                  - img "Manager" [ref=e363]
+                  - generic: Bio Tech Fuels
+                  - generic:
+                    - generic: "2021"
+                    - generic: August
+                - generic [ref=e364]:
+                  - heading "Manager" [level=4] [ref=e365]
+                  - paragraph [ref=e366]: Managed business operations, invoicing, and finances.
+              - generic [ref=e368]:
+                - generic [ref=e369]:
+                  - img "Welfare Officer" [ref=e370]
+                  - generic: Sharp Catering Hotels Ltd
+                  - generic:
+                    - generic: "2025"
+                    - generic: June
+                - generic [ref=e371]:
+                  - heading "Welfare Officer" [level=4] [ref=e372]
+                  - paragraph [ref=e373]: Enhanced workforce well-being and operational efficiency.
+              - generic [ref=e375]:
+                - generic [ref=e376]:
+                  - img "Aspiring Business Analyst" [ref=e377]
+                  - generic:
+                    - generic: "2026"
+                    - generic: August
+                - generic [ref=e378]:
+                  - heading "Aspiring Business Analyst" [level=4] [ref=e379]
+                  - paragraph [ref=e380]: Optimized business processes through data-driven insights.
+      - generic [ref=e382]:
+        - generic [ref=e383]:
+          - generic [ref=e384]: Verified Accreditations
+          - heading "Professional Certifications" [level=2] [ref=e388]
+        - region "Image carousel" [ref=e390]:
+          - generic [ref=e391]: Excel Essential Training, 1 of 12
+      - generic [ref=e393]:
+        - generic [ref=e394]:
+          - generic [ref=e395]: Start a Conversation
+          - heading "Let's Build Data Authority Together" [level=2] [ref=e399]
+        - generic [ref=e400]:
+          - generic [ref=e403]:
+            - generic [ref=e404]:
+              - generic [ref=e405]:
+                - generic [ref=e406]: Your Full Name *
+                - textbox "e.g. Sarah Jenkins" [ref=e407]
+              - generic [ref=e408]:
+                - generic [ref=e409]: Work Email *
+                - textbox "s.jenkins@enterprise.com" [ref=e410]
+            - generic [ref=e411]:
+              - generic [ref=e412]:
+                - generic [ref=e413]: Company / Organization
+                - textbox "e.g. Horizon Health Systems" [ref=e414]
+              - generic [ref=e415]:
+                - generic [ref=e416]: Engagement Scope
+                - combobox [ref=e417]:
+                  - option "BI & Telemetry Cockpit Design" [selected]
+                  - option "ERP / Core Systems Migration"
+                  - option "Business Process Optimization"
+                  - option "Fractional Senior Business Analyst"
+                  - option "Other Analytical Advisory"
+            - generic [ref=e418]:
+              - generic [ref=e419]: Project Objective / Key Bottlenecks *
+              - textbox "Share details on your current data infrastructure, timeline, or key decisions needing analytical rigor..." [ref=e420]
+            - button "Dispatch Project Inquiry" [ref=e421] [cursor=pointer]
+          - generic [ref=e426]:
+            - generic [ref=e427]:
+              - generic [ref=e428]: Current Availability
+              - paragraph [ref=e433]: Currently open for BI migrations, and high-stakes data requirements engagements worldwide.
+              - link "Book a Strategy Session Select a 30-minute direct consultation →" [ref=e434] [cursor=pointer]:
+                - /url: https://calendly.com/your-handle
+                - generic [ref=e439]:
+                  - generic [ref=e440]: Book a Strategy Session
+                  - generic [ref=e441]: Select a 30-minute direct consultation
+                - generic [ref=e442]: →
+            - generic [ref=e443]:
+              - heading "Direct Contact Coordinates" [level=4] [ref=e444]
+              - generic [ref=e445]:
+                - link "rizwanrizz808944@gmail.com" [ref=e446] [cursor=pointer]:
+                  - /url: mailto:rizwanrizz808944@gmail.com
+                - generic [ref=e452]: UK
+                - generic [ref=e458]: "Typical Response Time: < 24 Hours"
+    - contentinfo [ref=e464]:
+      - generic [ref=e465]:
+        - generic [ref=e466]:
+          - generic [ref=e467]:
+            - heading "Rizwan Shaji" [level=2] [ref=e468]
+            - paragraph [ref=e469]: Business Analyst — Strategic Analytics & Process Engineering
+          - button "Scroll back to top" [ref=e470]:
+            - generic [ref=e471]: Back to Top
+        - generic [ref=e474]:
+          - generic [ref=e475]:
+            - generic [ref=e476]: Site Navigation
+            - generic [ref=e477]:
+              - link "Home" [ref=e478] [cursor=pointer]:
+                - /url: "#home"
+              - link "About" [ref=e479] [cursor=pointer]:
+                - /url: "#about"
+              - link "Projects" [ref=e480] [cursor=pointer]:
+                - /url: "#projects"
+              - link "Technologies" [ref=e481] [cursor=pointer]:
+                - /url: "#technologies"
+              - link "Process" [ref=e482] [cursor=pointer]:
+                - /url: "#process"
+              - link "Journey" [ref=e483] [cursor=pointer]:
+                - /url: "#journey"
+              - link "Certifications" [ref=e484] [cursor=pointer]:
+                - /url: "#certifications"
+              - link "Contact" [ref=e485] [cursor=pointer]:
+                - /url: "#contact"
+          - generic [ref=e487]:
+            - generic [ref=e488]: Connect
+            - generic [ref=e489]:
+              - link "LinkedIn" [ref=e490] [cursor=pointer]:
+                - /url: http://www.linkedin.com/in/rizwanks
+              - link "GitHub" [ref=e493] [cursor=pointer]:
+                - /url: https://github.com/rizwanshaji
+              - link "Instagram" [ref=e496] [cursor=pointer]:
+                - /url: https://www.instagram.com/ri_z_wan__/
+              - link "Email" [ref=e499] [cursor=pointer]:
+                - /url: mailto:rizwanrizz808944@gmail.com
+        - paragraph [ref=e504]: ©Rizwan Shaji. All analytical methodologies & rights reserved.
+  - status "Loading" [ref=e506]:
+    - paragraph [ref=e507]: "94"
+  - button "Open Next.js Dev Tools" [ref=e513] [cursor=pointer]:
+    - generic [ref=e516]:
+      - text: Compiling
+      - generic [ref=e517]:
+        - generic [ref=e518]: .
+        - generic [ref=e519]: .
+        - generic [ref=e520]: .
+  - alert [ref=e521]

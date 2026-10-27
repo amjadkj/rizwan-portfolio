@@ -18,6 +18,7 @@ interface Project {
   summary: string;
   deliverables: string[];
   techStack: string[];
+  github:string;
 }
 
 const PROJECTS: Project[] = [
@@ -41,6 +42,7 @@ const PROJECTS: Project[] = [
       "Customer Feedback & Data Quality Reporting",
     ],
     techStack: ["Power BI", "PowerQuery", "Excel"],
+    github:"https://github.com/rizwanshaji/Olist-Analysis"
   },
   // {
   //   id: "fintech-erp",
@@ -263,8 +265,9 @@ export function ProjectsSection() {
                   </div>
 
                   <a
-                    href="#contact"
+                    href={currentProject.github}
                     className="inline-flex items-center gap-2 text-xs font-grotesk uppercase tracking-widest text-[#ffdad4] hover:text-[#E5484D] transition-colors"
+                    target="_blank"
                   >
                     <span>View Full Case Study</span>
                     <ExternalLink className="size-3.5" />

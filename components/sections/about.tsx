@@ -62,7 +62,7 @@ export function About() {
           <motion.h2
             id="about-heading"
             variants={itemVariants}
-            className="font-sans text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#F5EDED]"
+            className="font-sans text-3xl sm:text-4xl lg:text-3xl font-bold tracking-tight text-[#F5EDED]"
           >
             Turning structured analysis into clear decisions.
           </motion.h2>
@@ -110,7 +110,9 @@ export function About() {
                 Book a Call
               </a> */}
               <a
-                href="#contact"
+                href="/Rizwan_Analyst_Cv.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex h-12 w-full sm:w-auto items-center justify-center rounded-[16px] border border-white/[0.12] bg-white/5 px-7 font-sans text-[15px] font-medium text-[#F5EDED] transition-all duration-300 hover:bg-white/10 hover:border-white/20 focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-white/20"
               >
                 Download CV
