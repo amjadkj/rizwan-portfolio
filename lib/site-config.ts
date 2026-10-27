@@ -8,7 +8,7 @@ export const siteConfig = {
   phone: "+44 7733620478",
   location: "UK",
   nav: [
-    { id: "home", label: "Home" },
+    // { id: "home", label: "Home" },
     { id: "about", label: "About" },
     { id: "projects", label: "Projects" },
     { id: "technologies", label: "Technologies" },
