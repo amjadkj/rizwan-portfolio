@@ -3,6 +3,7 @@
 import * as React from "react";
 import { createPortal } from "react-dom";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { X, Menu } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
 import { cn } from "@/lib/utils";
@@ -12,6 +13,8 @@ interface MobileNavProps {
 }
 
 export function MobileNav({ activeSection }: MobileNavProps) {
+  const pathname = usePathname();
+  const isHome = pathname === "/";
   const [isOpen, setIsOpen] = React.useState(false);
   const [mounted, setMounted] = React.useState(false);
 
@@ -85,11 +88,11 @@ export function MobileNav({ activeSection }: MobileNavProps) {
             {/* Navigation links */}
             <nav aria-label="Mobile Primary" className="flex flex-col gap-2 py-6">
               {siteConfig.nav.map(({ id, label }) => {
-                const isActive = activeSection === id;
+                const isActive = isHome && activeSection === id;
                 return (
                   <a
                     key={id}
-                    href={`#${id}`}
+                    href={isHome ? `#${id}` : `/#${id}`}
                     onClick={handleLinkClick}
                     aria-current={isActive ? "location" : undefined}
                     className={cn(

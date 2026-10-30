@@ -1,0 +1,163 @@
+.root {
+  --surface-muted: rgba(255, 255, 255, 0.04);
+  --surface-raised: rgba(24, 2, 2, 0.75);
+  --shadow-raised: 0 24px 48px -12px rgba(0, 0, 0, 0.8);
+  --space-3: 0.75rem;
+  --radius-panel: 1.5rem;
+  --radius-pill: 9999px;
+  --duration-fast: 160ms;
+  --ease-standard: cubic-bezier(0.22, 1, 0.36, 1);
+
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  user-select: none;
+  touch-action: pan-y;
+  cursor: ew-resize;
+}
+
+.root[data-orientation="vertical"] {
+  touch-action: pan-x;
+  cursor: ns-resize;
+}
+
+.layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.layer img,
+.layer > * {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  display: block;
+}
+
+.chip {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 10;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  background: rgba(24, 2, 2, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  font-family: var(--font-space-grotesk), sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #F5EDED;
+  pointer-events: none;
+}
+
+.chip[data-place="end"] {
+  left: auto;
+  right: 1rem;
+}
+
+.chip[data-place="bottom"] {
+  left: auto;
+  top: auto;
+  right: 1rem;
+  bottom: 1rem;
+}
+
+.pivot {
+  position: absolute;
+  width: 0;
+  height: 0;
+  z-index: 15;
+  pointer-events: none;
+  /* left/top are set inline by motion (pivotX / pivotY) */
+}
+
+.rotor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+}
+
+.line {
+  position: absolute;
+  top: -2000px;
+  bottom: -2000px;
+  left: -1px;
+  width: 2px;
+  background: rgba(245, 237, 237, 0.85);
+  box-shadow: 0 0 12px rgba(229, 72, 77, 0.5);
+  pointer-events: none;
+}
+
+.handleSlot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;
+  cursor: grab;
+  /* no transform here: motion drives x/y */
+}
+
+.root[data-dragging] .handleSlot {
+  cursor: grabbing;
+}
+
+.handle {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  border-radius: 9999px;
+  background: rgba(24, 2, 2, 0.75);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.20);
+  box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.8), 0 0 16px rgba(229, 72, 77, 0.25);
+  color: #F5EDED;
+  outline: none;
+  touch-action: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.handle:focus-visible:not([data-quiet]) {
+  outline: 2px solid #E5484D;
+  outline-offset: 3px;
+}
+
+.handle:hover {
+  border-color: rgba(229, 72, 77, 0.6);
+  box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.8), 0 0 24px rgba(229, 72, 77, 0.45);
+}
+
+.chevrons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  color: #F5EDED;
+  pointer-events: none;
+}
+
+.chevron {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #F5EDED;
+}

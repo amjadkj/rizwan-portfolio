@@ -1,7 +1,8 @@
 "use client";
 
 import * as React from "react";
-import { ChevronLeft, ChevronRight, ExternalLink, Sparkles, TrendingUp } from "lucide-react";
+import Link from "next/link";
+import { ChevronLeft, ChevronRight, ExternalLink, Sparkles, TrendingUp, ArrowUpRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface Project {
@@ -23,7 +24,7 @@ interface Project {
 
 const PROJECTS: Project[] = [
   {
-    id: "supply-chain",
+    id: "olist-ecommerce",
     title: "BUSINESS ANALYSIS & BI PROJECT",
     category: "Operations & BI",
     client: "OLIST E-COMMERCE",
@@ -264,14 +265,26 @@ export function ProjectsSection() {
                     ))}
                   </div>
 
-                  <a
-                    href={currentProject.github}
-                    className="inline-flex items-center gap-2 text-xs font-grotesk uppercase tracking-widest text-[#ffdad4] hover:text-[#E5484D] transition-colors"
-                    target="_blank"
-                  >
-                    <span>View Full Case Study</span>
-                    <ExternalLink className="size-3.5" />
-                  </a>
+                  <div className="flex items-center gap-3">
+                    <Link
+                      href={`/projects/${currentProject.id}`}
+                      className="inline-flex items-center gap-1.5 text-xs font-grotesk uppercase tracking-wider text-[#F5EDED] bg-[#E5484D] px-3.5 py-1.5 rounded-full hover:bg-[#F05D62] transition-colors shadow-[0_0_16px_rgba(229,72,77,0.35)]"
+                    >
+                      <span>Explore Project</span>
+                      <ArrowUpRight className="size-3.5" />
+                    </Link>
+
+                    {currentProject.github && (
+                      <a
+                        href={currentProject.github}
+                        className="inline-flex items-center gap-1.5 text-xs font-grotesk uppercase tracking-wider text-[#ffdad4] hover:text-[#E5484D] transition-colors"
+                        target="_blank"
+                      >
+                        <span>GitHub</span>
+                        <ExternalLink className="size-3" />
+                      </a>
+                    )}
+                  </div>
                 </div>
               </div>
           </div>

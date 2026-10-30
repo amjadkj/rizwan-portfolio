@@ -36,6 +36,7 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://rizwanshaji.com"),
   title: "Rizwan Shaji | Business Analyst",
   description:
     "Executive portfolio of Rizwan Shaji, Business Analyst specializing in high-stakes quantitative analytics, business process engineering, and strategic enterprise systems.",

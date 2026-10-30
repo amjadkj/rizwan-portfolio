@@ -3,6 +3,7 @@
 import * as React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { siteConfig } from "@/lib/site-config";
 import { useActiveSection } from "@/hooks/use-active-section";
 import { useScrollDirection } from "@/hooks/use-scroll-direction";
@@ -12,6 +13,8 @@ import { cn } from "@/lib/utils";
 const SECTION_IDS = siteConfig.nav.map((item) => item.id);
 
 export function SiteHeader() {
+  const pathname = usePathname();
+  const isHome = pathname === "/";
   const activeSection = useActiveSection(SECTION_IDS);
   const scrollDir = useScrollDirection();
   const hidden = scrollDir === "down";
@@ -27,7 +30,7 @@ export function SiteHeader() {
       <div className="flex h-16 items-center justify-between rounded-full border border-white/15 bg-[rgba(24,2,2,0.75)] px-3 shadow-[0_24px_48px_-12px_rgba(0,0,0,0.8)] backdrop-blur-2xl md:px-4">
         {/* Far Left: Identity */}
         <Link
-          href="#home"
+          href={isHome ? "#home" : "/#home"}
           className="group flex items-center gap-3 transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-[#E5484D]/40 rounded-full"
         >
           {/* <div className="relative size-9 overflow-hidden rounded-full border border-white/20 bg-white/5 p-0.5 shadow-[0_0_12px_rgba(229,72,77,0.35)] transition-transform duration-300 group-hover:scale-105">
@@ -57,11 +60,11 @@ export function SiteHeader() {
         {/* Center: Desktop Navigation Links */}
         <nav aria-label="Primary" className="hidden lg:flex items-center gap-1">
           {siteConfig.nav.map(({ id, label }) => {
-            const isActive = activeSection === id;
+            const isActive = isHome && activeSection === id;
             return (
               <a
                 key={id}
-                href={`#${id}`}
+                href={isHome ? `#${id}` : `/#${id}`}
                 aria-current={isActive ? "location" : undefined}
                 className={cn(
                   "relative rounded-full px-3 py-1.5 text-[15px] leading-6 font-medium transition-colors duration-200 hover:bg-white/6",
@@ -85,7 +88,7 @@ export function SiteHeader() {
         {/* Right: Actions */}
         <div className="flex items-center gap-3">
           <a
-            href="#contact"
+            href={isHome ? "#contact" : "/#contact"}
             className="flex h-10 items-center justify-center rounded-full bg-[#E5484D] px-5 text-sm font-medium text-[#F5EDED] shadow-[0_0_20px_rgba(229,72,77,0.4)] shadow-[inset_0_1px_0_rgba(255,255,255,0.25)] transition hover:bg-[#F05D62] hover:shadow-[0_0_28px_rgba(229,72,77,0.6)] focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-[#E5484D]/40"
           >
             Hire Me

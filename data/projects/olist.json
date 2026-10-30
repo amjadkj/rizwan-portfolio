@@ -1,0 +1,104 @@
+{
+  "slug": "olist-ecommerce",
+  "intro": {
+    "title": "Olist Customer Satisfaction Analysis",
+    "description": "Analysed 99,224 customer reviews alongside order, delivery, product and seller data to identify patterns behind low satisfaction on the Olist marketplace.",
+    "tools": ["Power BI", "Power Query"],
+    "image": {
+      "src": "/projects/olist-ecommerce/cover.png",
+      "alt": "Olist customer satisfaction Power BI dashboard"
+    },
+    "imagePosition": "right center",
+    "backHref": "/#projects"
+  },
+  "assessment": {
+    "description": [
+      "The project began with a business problem: understanding the factors associated with low customer satisfaction on the Olist e-commerce marketplace. Customer review scores were used as a proxy for satisfaction, with 1–2 stars treated as low satisfaction, 3 stars as neutral or mixed, and 4–5 stars as higher satisfaction.",
+      "The objective was to analyse review scores alongside related order, delivery, product category and seller data to identify patterns that could help prioritise areas for further investigation. The project scope and supporting business questions were defined before any data was analysed."
+    ],
+    "image": {
+      "src": "/projects/olist-ecommerce/assesment.png",
+      "alt": "Business problem and project scope for the Olist analysis"
+    }
+  },
+  "stakeholders": {
+    "tag": "Stakeholders",
+    "panelTitle": "who we aligned with",
+    "panelTagline": "Stakeholders were identified through analysis of the business context. No interviews or workshops were conducted, as this was an independent portfolio project.",
+    "image": {
+      "src": "/projects/olist-ecommerce/stakeholders.jpg",
+      "alt": "Power-interest matrix of Olist stakeholders"
+    },
+    "points": [
+      { "icon": "Users", "text": "Customers: the source of the review scores used as a proxy for satisfaction." },
+      { "icon": "ShieldCheck", "text": "Sellers: need fair, consistent comparison of low-review proportions." },
+      { "icon": "Compass", "text": "Olist management: need evidence to prioritise areas for investigation." },
+      { "icon": "Route", "text": "Delivery partners: delivery performance and its relationship to review scores." },
+      { "icon": "ClipboardList", "text": "Customer support team: interest in monitoring customer feedback." },
+      { "icon": "BarChart3", "text": "Outputs: stakeholder analysis, business and functional requirements, user stories, acceptance criteria and MoSCoW prioritisation." }
+    ]
+  },
+  "comparison": {
+    "heading": "Delivery Performance (Late vs On Time)",
+    "tagline": "Direct comparison of low-review proportions between late deliveries and orders delivered on time or early.",
+    "old": {
+      "image": {
+        "src": "/projects/olist-ecommerce/csv.png",
+        "alt": "Low-review proportion for late deliveries"
+      },
+      "heading": "Late Deliveries",
+      "points": [
+        "62.35% of eligible late orders received a 1–2 star review.",
+        "Comparison limited to eligible orders with valid delivery timestamps.",
+        "Indicates an association worth investigating, not proven causation."
+      ]
+    },
+    "new": {
+      "image": {
+        "src": "/projects/olist-ecommerce/Analytics Dashboard.png",
+        "alt": "Low-review proportion for on-time or early deliveries"
+      },
+      "heading": "On Time or Early",
+      "points": [
+        "9.17% of eligible on-time or early orders received a 1–2 star review.",
+        "Same eligibility rules and counting units applied as for late orders.",
+        "Forms a baseline for future monitoring of delivery performance."
+      ]
+    },
+    "labels": ["Late", "On Time / Early"],
+    "sliderLabel": "Compare low-review proportions for late deliveries versus on-time or early deliveries",
+    "aspectRatio": "16 / 9",
+    "defaultPosition": 50
+  },
+  "evaluation": {
+    "image": {
+      "src": "/projects/olist-ecommerce/Floating Laptop.png",
+      "alt": "Key findings from the Olist customer satisfaction analysis"
+    },
+    "imageStyle": "free",
+    "points": [
+      { "icon": "Scale", "title": "Overall satisfaction", "text": "14.69% of the 99,224 reviews were rated 1–2 stars, with an average review score of 4.09 out of 5." },
+      { "icon": "AlertTriangle", "title": "Delivery performance", "text": "Among eligible orders, the low-review proportion was 62.35% for late deliveries versus 9.17% for on-time or early deliveries." },
+      { "icon": "TrendingUp", "title": "Seller performance", "text": "The proportion of low-review orders varied between the sellers examined." },
+      { "icon": "Lightbulb", "title": "Product categories", "text": "Low-review proportions also varied across the product categories examined." },
+      { "icon": "Target", "title": "Data quality", "text": "Missing values, repeated review identifiers and timestamp inconsistencies limited how results could be interpreted." },
+      { "icon": "CheckCircle2", "title": "Recommendations", "text": "Investigate late deliveries, monitor sellers fairly, compare categories consistently, track customer feedback and strengthen reporting definitions. Results show associations, not causes." }
+    ]
+  },
+  "validation": {
+    "images": [
+      { "src": "/projects/olist-ecommerce/grid1.jpeg", "alt": "Baseline low-review proportion measure" },
+      { "src": "/projects/olist-ecommerce/grid2.jpeg", "alt": "Average review score baseline" },
+      { "src": "/projects/olist-ecommerce/grid3.jpeg", "alt": "Late versus on-time delivery baseline difference" },
+      { "src": "/projects/olist-ecommerce/grid4.jpeg", "alt": "Documented limitations and monitoring approach" }
+    ],
+    "points": [
+      { "title": "Documented findings", "text": "Findings, recommendations and limitations were documented so results can be read in the context of the available data." },
+      { "title": "Baseline: low reviews", "text": "The overall proportion of low reviews (14.69%) was established as a baseline measure." },
+      { "title": "Baseline: average score", "text": "The average review score of 4.09 out of 5 was recorded as a reference point." },
+      { "title": "Baseline: delivery gap", "text": "The difference in low-review proportions between late and on-time or early deliveries was captured for future comparison." },
+      { "title": "Future monitoring", "text": "A real-world implementation could track delivery performance and low-review proportions over time to see whether changes are associated with improved feedback." },
+      { "title": "Scope limits", "text": "Recommendations were not implemented and no post-implementation results were measured. Formal user acceptance testing and post-implementation validation were not documented." }
+    ]
+  }
+}
