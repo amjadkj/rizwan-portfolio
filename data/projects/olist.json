@@ -9,7 +9,8 @@
       "alt": "Olist customer satisfaction Power BI dashboard"
     },
     "imagePosition": "right center",
-    "backHref": "/#projects"
+    "backHref": "/#projects",
+    "github":"https://github.com/rizwanshaji/Olist-Analysis"
   },
   "assessment": {
     "description": [
@@ -73,32 +74,86 @@
   "evaluation": {
     "image": {
       "src": "/projects/olist-ecommerce/Floating Laptop.png",
-      "alt": "Key findings from the Olist customer satisfaction analysis"
+      "alt": "Solution evaluation and business recommendations"
     },
     "imageStyle": "free",
     "points": [
-      { "icon": "Scale", "title": "Overall satisfaction", "text": "14.69% of the 99,224 reviews were rated 1–2 stars, with an average review score of 4.09 out of 5." },
-      { "icon": "AlertTriangle", "title": "Delivery performance", "text": "Among eligible orders, the low-review proportion was 62.35% for late deliveries versus 9.17% for on-time or early deliveries." },
-      { "icon": "TrendingUp", "title": "Seller performance", "text": "The proportion of low-review orders varied between the sellers examined." },
-      { "icon": "Lightbulb", "title": "Product categories", "text": "Low-review proportions also varied across the product categories examined." },
-      { "icon": "Target", "title": "Data quality", "text": "Missing values, repeated review identifiers and timestamp inconsistencies limited how results could be interpreted." },
-      { "icon": "CheckCircle2", "title": "Recommendations", "text": "Investigate late deliveries, monitor sellers fairly, compare categories consistently, track customer feedback and strengthen reporting definitions. Results show associations, not causes." }
+      {
+        "icon": "Scale",
+        "title": "Solution Feasibility",
+        "text": "Assess technical, operational and business feasibility of proposed solutions."
+      },
+      {
+        "icon": "TrendingUp",
+        "title": "Cost-Benefit Analysis",
+        "text": "Compare implementation costs, expected benefits and potential business value."
+      },
+      {
+        "icon": "AlertTriangle",
+        "title": "Risk Assessment",
+        "text": "Identify potential risks, constraints and challenges associated with each solution."
+      },
+      {
+        "icon": "GitCompare",
+        "title": "Alternative Evaluation",
+        "text": "Compare available solutions against business needs and project objectives."
+      },
+      {
+        "icon": "Target",
+        "title": "Business Alignment",
+        "text": "Ensure proposed solutions support organisational goals and priorities."
+      },
+      {
+        "icon": "Lightbulb",
+        "title": "Recommendations",
+        "text": "Present actionable recommendations based on feasibility, costs, benefits and risks."
+      }
     ]
   },
   "validation": {
     "images": [
-      { "src": "/projects/olist-ecommerce/grid1.jpeg", "alt": "Baseline low-review proportion measure" },
-      { "src": "/projects/olist-ecommerce/grid2.jpeg", "alt": "Average review score baseline" },
-      { "src": "/projects/olist-ecommerce/grid3.jpeg", "alt": "Late versus on-time delivery baseline difference" },
-      { "src": "/projects/olist-ecommerce/grid4.jpeg", "alt": "Documented limitations and monitoring approach" }
+      {
+        "src": "/projects/olist-ecommerce/grid1.jpeg",
+        "alt": "Solution requirements validation"
+      },
+      {
+        "src": "/projects/olist-ecommerce/grid2.jpeg",
+        "alt": "User acceptance testing results"
+      },
+      {
+        "src": "/projects/olist-ecommerce/grid3.jpeg",
+        "alt": "Requirements verification and acceptance criteria"
+      },
+      {
+        "src": "/projects/olist-ecommerce/grid4.jpeg",
+        "alt": "Implementation handover and KPI monitoring"
+      }
     ],
     "points": [
-      { "title": "Documented findings", "text": "Findings, recommendations and limitations were documented so results can be read in the context of the available data." },
-      { "title": "Baseline: low reviews", "text": "The overall proportion of low reviews (14.69%) was established as a baseline measure." },
-      { "title": "Baseline: average score", "text": "The average review score of 4.09 out of 5 was recorded as a reference point." },
-      { "title": "Baseline: delivery gap", "text": "The difference in low-review proportions between late and on-time or early deliveries was captured for future comparison." },
-      { "title": "Future monitoring", "text": "A real-world implementation could track delivery performance and low-review proportions over time to see whether changes are associated with improved feedback." },
-      { "title": "Scope limits", "text": "Recommendations were not implemented and no post-implementation results were measured. Formal user acceptance testing and post-implementation validation were not documented." }
+      {
+        "title": "Requirements Validation",
+        "text": "Verify proposed solutions against documented business requirements and acceptance criteria."
+      },
+      {
+        "title": "Functional Testing",
+        "text": "Support testing activities to ensure solutions meet expected functional requirements."
+      },
+      {
+        "title": "User Acceptance Testing",
+        "text": "Facilitate UAT to confirm solutions satisfy stakeholder and user expectations."
+      },
+      {
+        "title": "Implementation Handover",
+        "text": "Support implementation handover with documented requirements and solution specifications."
+      },
+      {
+        "title": "Performance Measurement",
+        "text": "Establish measurable KPIs to evaluate solution effectiveness and business outcomes."
+      },
+      {
+        "title": "Continuous Improvement",
+        "text": "Monitor performance indicators and identify opportunities for ongoing optimisation."
+      }
     ]
   }
 }

@@ -10,6 +10,7 @@ export type IntroData = {
   image: ImageData; // full-bleed background
   imagePosition?: string; // CSS object-position, default "center"
   backHref?: string; // default "/#projects"
+  github: string;
 };
 
 export type AssessmentData = {

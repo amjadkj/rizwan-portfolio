@@ -4,7 +4,7 @@ import * as React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, useReducedMotion, useScroll, useTransform, type Variants } from "motion/react";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, ExternalLink } from "lucide-react";
 import type { IntroData } from "@/types/project";
 
 export default function ProjectIntro({
@@ -14,6 +14,7 @@ export default function ProjectIntro({
   image,
   imagePosition = "center",
   backHref = "/#projects",
+  github
 }: IntroData) {
   const shouldReduceMotion = useReducedMotion();
   const { scrollY } = useScroll();
@@ -146,6 +147,23 @@ export default function ProjectIntro({
               className="mt-5 font-sans font-normal text-[18px] leading-[28px] text-[#BFA7A7] max-w-[560px]"
             >
               {description}
+            </motion.p>
+          )}
+
+          {/* Description */}
+          {github && (
+            <motion.p
+              variants={itemVariants}
+              className="mt-5 font-sans font-normal text-[18px] leading-[28px] text-[#BFA7A7] max-w-[560px]"
+            >
+              <a
+                href={github}
+                className="inline-flex items-center gap-1.5 text-l font-grotesk uppercase tracking-wider text-[#ffdad4] hover:text-[#E5484D] transition-colors"
+                target="_blank"
+              >
+                <span>GitHub</span>
+                <ExternalLink className="size-3" />
+              </a>
             </motion.p>
           )}
 

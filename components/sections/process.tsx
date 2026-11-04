@@ -8,57 +8,45 @@ import { ContainerScroll, CardSticky } from "@/components/ui/cards-stack";
 const STEPS = [
   {
     step: "01",
-    title: "Business Needs Assessment",
+    title: "Business Needs Assessment & Project Planning",
     icon: Search,
-    timeframe: "Week 1 - 2",
-    summary:
-      "Identify business problems, define objectives, assess root causes and establish success criteria.",
-    // deliverable: "Baseline KPI Blueprint & Stakeholder Alignment Matrix",
+    timeframe: "Project Initiation",
+    summary: "Understand business needs, objectives, scope and success criteria.",
   },
   {
     step: "02",
     title: "Stakeholder Engagement & Requirements Elicitation",
     icon: Database,
-    timeframe: "Week 3 - 4",
-    summary:
-      "Identify stakeholders, gather business requirements, analyse user needs and document expectations.",
-    // deliverable: "Data Hygiene Scorecard & Dimensional Schema Plan",
+    timeframe: "Stakeholder Engagement",
+    summary: "Identify stakeholders, gather requirements and document expectations.",
   },
   {
     step: "03",
-    title: "Business Process Modelling & Gap Analysis",
+    title: "Business Process Modelling, Data Analysis & Gap Analysis",
     icon: LineChart,
-    timeframe: "Week 5 - 6",
-    summary:
-      "Analyse AS-IS and TO-BE processes, identify inefficiencies, assess gaps and define improvement opportunities.",
-    // deliverable: "Interactive Sandbox Dashboard & Acceptance Criteria",
+    timeframe: "Investigation & Analysis",
+    summary: "Analyse processes, identify gaps and uncover improvement opportunities.",
   },
   {
     step: "04",
-    title: "Requirements Analysis & Data-Driven Insights",
+    title: "Requirements Analysis & Solution Design",
     icon: Cpu,
-    timeframe: "Week 7 - 8",
-    summary:
-      "Analyse and prioritise requirements, validate business needs, examine data and identify actionable insights.",
-    // deliverable: "Production Telemetry Cockpit & Validated ETL Pipelines",
+    timeframe: "Requirements & Design",
+    summary: "Prioritise requirements and design effective business solutions.",
   },
   {
     step: "05",
     title: "Solution Evaluation & Recommendations",
     icon: Award,
-    timeframe: "Post-Launch",
-    summary:
-      "Evaluate solution options, assess feasibility, analyse risks and benefits, and recommend improvements aligned with business objectives.",
-    // deliverable: "Change Management SOP & Executive ROI Report",
+    timeframe: "Evaluation & Decision-Making",
+    summary: "Evaluate alternatives, assess feasibility and recommend solutions.",
   },
   {
     step: "06",
-    title: "Solution Validation & Continuous Improvement",
+    title: "Solution Validation & Implementation Support",
     icon: Award,
-    timeframe: "Post-Launch",
-    summary:
-      "Support User Acceptance Testing (UAT), verify requirements against acceptance criteria, evaluate business outcomes and identify opportunities for optimisation.",
-    // deliverable: "Change Management SOP & Executive ROI Report",
+    timeframe: "Validation & Implementation",
+    summary: "Validate solutions, support implementation and establish improvement KPIs.",
   },
 ];
 
