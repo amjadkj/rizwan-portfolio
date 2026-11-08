@@ -10,12 +10,13 @@
     },
     "imagePosition": "right center",
     "backHref": "/#projects",
-    "github":"https://github.com/rizwanshaji/Olist-Analysis"
+    "github": "https://github.com/rizwanshaji/Olist-Analysis"
   },
   "assessment": {
     "description": [
-      "The project began with a business problem: understanding the factors associated with low customer satisfaction on the Olist e-commerce marketplace. Customer review scores were used as a proxy for satisfaction, with 1–2 stars treated as low satisfaction, 3 stars as neutral or mixed, and 4–5 stars as higher satisfaction.",
-      "The objective was to analyse review scores alongside related order, delivery, product category and seller data to identify patterns that could help prioritise areas for further investigation. The project scope and supporting business questions were defined before any data was analysed."
+      "The project investigated factors associated with low customer satisfaction on the Olist e-commerce marketplace. Customer review scores were used as a proxy for satisfaction, with 1–2 stars treated as low satisfaction, 3 stars as neutral or mixed satisfaction, and 4–5 stars as higher satisfaction.",
+      "The objective was to analyse 99,224 customer reviews alongside order, delivery, product category and seller data to identify patterns and prioritise areas for further investigation. The project scope and supporting business questions were established before any analysis took place.",
+      "Outcome: a defined business problem, objectives, scope and analytical questions."
     ],
     "image": {
       "src": "/projects/olist-ecommerce/assesment.png",
@@ -25,49 +26,55 @@
   "stakeholders": {
     "tag": "Stakeholders",
     "panelTitle": "who we aligned with",
-    "panelTagline": "Stakeholders were identified through analysis of the business context. No interviews or workshops were conducted, as this was an independent portfolio project.",
+    "panelTagline": "Stakeholders were identified through business-context analysis. No interviews or workshops were conducted, as this was an independent portfolio project.",
     "image": {
       "src": "/projects/olist-ecommerce/stakeholders.jpg",
       "alt": "Power-interest matrix of Olist stakeholders"
     },
     "points": [
       { "icon": "Users", "text": "Customers: the source of the review scores used as a proxy for satisfaction." },
-      { "icon": "ShieldCheck", "text": "Sellers: need fair, consistent comparison of low-review proportions." },
-      { "icon": "Compass", "text": "Olist management: need evidence to prioritise areas for investigation." },
-      { "icon": "Route", "text": "Delivery partners: delivery performance and its relationship to review scores." },
-      { "icon": "ClipboardList", "text": "Customer support team: interest in monitoring customer feedback." },
-      { "icon": "BarChart3", "text": "Outputs: stakeholder analysis, business and functional requirements, user stories, acceptance criteria and MoSCoW prioritisation." }
+      { "icon": "ShieldCheck", "text": "Sellers: require fair and consistent comparisons of low-review proportions." },
+      { "icon": "Compass", "text": "Olist management: needs evidence to prioritise areas for investigation." },
+      { "icon": "Route", "text": "Delivery partners: relevant to delivery performance and its relationship with review scores." },
+      { "icon": "ClipboardList", "text": "Customer support team: interested in monitoring customer feedback." },
+      { "icon": "BarChart3", "text": "Requirements and outputs: low-review comparisons across sellers, categories and delivery performance; stakeholder analysis, user stories, acceptance criteria and MoSCoW prioritisation." }
     ]
   },
   "comparison": {
-    "heading": "Delivery Performance (Late vs On Time)",
-    "tagline": "Direct comparison of low-review proportions between late deliveries and orders delivered on time or early.",
+    "heading": "Data Analysis & Solution Design",
+    "tagline": "From examining the available data and its gaps to translating requirements into analytical comparisons and a dashboard.",
     "old": {
       "image": {
         "src": "/projects/olist-ecommerce/csv.png",
-        "alt": "Low-review proportion for late deliveries"
+        "alt": "Olist datasets examined during data analysis and gap assessment"
       },
-      "heading": "Late Deliveries",
+      "heading": "Data Analysis & Gap Analysis",
       "points": [
-        "62.35% of eligible late orders received a 1–2 star review.",
-        "Comparison limited to eligible orders with valid delivery timestamps.",
-        "Indicates an association worth investigating, not proven causation."
+        "Five datasets examined: Order Reviews, Orders, Order Items, Products and Sellers.",
+        "Structures, key fields, data types and relationships were reviewed.",
+        "Quality issues found: missing review text, repeated review IDs and multiple reviews per order.",
+        "Further issues: missing delivery timestamps and product categories, and inconsistent dates.",
+        "Relationships were mapped to set counting methods and avoid double-counting orders or reviews.",
+        "Covers data quality and analytical gaps, not a formal AS-IS/TO-BE process map."
       ]
     },
     "new": {
       "image": {
         "src": "/projects/olist-ecommerce/Analytics Dashboard.png",
-        "alt": "Low-review proportion for on-time or early deliveries"
+        "alt": "Power BI customer satisfaction dashboard built during solution design"
       },
-      "heading": "On Time or Early",
+      "heading": "Requirements Analysis & Solution Design",
       "points": [
-        "9.17% of eligible on-time or early orders received a 1–2 star review.",
-        "Same eligibility rules and counting units applied as for late orders.",
-        "Forms a baseline for future monitoring of delivery performance."
+        "Requirements became comparisons of reviews, sellers, categories and delivery performance.",
+        "Rule set: 1–2 star reviews are classed as low satisfaction.",
+        "Delivery comparisons restricted to eligible orders with valid timestamps.",
+        "Counting units defined for orders, sellers and product categories.",
+        "Power Query prepared the five datasets, and Power BI presented the analysis.",
+        "Outcome: prepared datasets, defined analytical rules and a Power BI dashboard."
       ]
     },
-    "labels": ["Late", "On Time / Early"],
-    "sliderLabel": "Compare low-review proportions for late deliveries versus on-time or early deliveries",
+    "labels": ["Data Analysis", "Solution Design"],
+    "sliderLabel": "Compare the data analysis and gap assessment with the solution design",
     "aspectRatio": "16 / 9",
     "defaultPosition": 50
   },
@@ -79,34 +86,34 @@
     "imageStyle": "free",
     "points": [
       {
-        "icon": "Scale",
-        "title": "Solution Feasibility",
-        "text": "Assess technical, operational and business feasibility of proposed solutions."
-      },
-      {
-        "icon": "TrendingUp",
-        "title": "Cost-Benefit Analysis",
-        "text": "Compare implementation costs, expected benefits and potential business value."
+        "icon": "BarChart3",
+        "title": "Overall Satisfaction",
+        "text": "14.69% of 99,224 reviews were rated 1–2 stars, with an average review score of 4.09 out of 5."
       },
       {
         "icon": "AlertTriangle",
-        "title": "Risk Assessment",
-        "text": "Identify potential risks, constraints and challenges associated with each solution."
+        "title": "Delivery Performance",
+        "text": "Low-review proportion was 62.35% for late deliveries versus 9.17% on time or early: an association, not proven causation."
       },
       {
-        "icon": "GitCompare",
-        "title": "Alternative Evaluation",
-        "text": "Compare available solutions against business needs and project objectives."
+        "icon": "Users",
+        "title": "Seller Performance",
+        "text": "Low-review proportions varied between the sellers examined."
       },
       {
-        "icon": "Target",
-        "title": "Business Alignment",
-        "text": "Ensure proposed solutions support organisational goals and priorities."
+        "icon": "Scale",
+        "title": "Product Categories",
+        "text": "Low-review proportions also varied across the product categories examined."
+      },
+      {
+        "icon": "Database",
+        "title": "Data Quality",
+        "text": "Missing values, repeated review IDs and timestamp inconsistencies limit analytical reliability."
       },
       {
         "icon": "Lightbulb",
         "title": "Recommendations",
-        "text": "Present actionable recommendations based on feasibility, costs, benefits and risks."
+        "text": "Investigate recurring late deliveries, monitor sellers, categories and feedback consistently, and strengthen data quality and reporting definitions."
       }
     ]
   },
@@ -131,28 +138,28 @@
     ],
     "points": [
       {
+        "title": "Documented Findings",
+        "text": "Findings, recommendations and limitations were documented to support interpretation of the results."
+      },
+      {
+        "title": "Baseline Measures",
+        "text": "Baselines set: overall low-review proportion, average review score and the late versus on-time gap."
+      },
+      {
+        "title": "Future Monitoring",
+        "text": "Delivery performance and low-review proportions could be tracked over time to assess improvement."
+      },
+      {
         "title": "Requirements Validation",
-        "text": "Verify proposed solutions against documented business requirements and acceptance criteria."
+        "text": "Future work could check solutions against documented requirements and agreed performance indicators."
       },
       {
-        "title": "Functional Testing",
-        "text": "Support testing activities to ensure solutions meet expected functional requirements."
+        "title": "Testing Support",
+        "text": "Functional and user acceptance testing could support validation in a real-world implementation."
       },
       {
-        "title": "User Acceptance Testing",
-        "text": "Facilitate UAT to confirm solutions satisfy stakeholder and user expectations."
-      },
-      {
-        "title": "Implementation Handover",
-        "text": "Support implementation handover with documented requirements and solution specifications."
-      },
-      {
-        "title": "Performance Measurement",
-        "text": "Establish measurable KPIs to evaluate solution effectiveness and business outcomes."
-      },
-      {
-        "title": "Continuous Improvement",
-        "text": "Monitor performance indicators and identify opportunities for ongoing optimisation."
+        "title": "Scope Boundaries",
+        "text": "Not completed: recommendations were not implemented, post-implementation results were not measured, and formal UAT and handover were not documented."
       }
     ]
   }
